@@ -4,15 +4,17 @@ import org.testng.annotations.Test;
 
 public class enableDisable {
     @Test
-    public void Atest(){
+    public void Atest() {
         System.out.println("i am the first test case");
     }
+
     @Test
-    public void Btest(){
+    public void Btest() {
         System.out.println("i am the second test case");
     }
+
     @Test(enabled = false)
-    public void Ctest(){
+    public void Ctest() {
         System.out.println("i am the third test case");
     }
 

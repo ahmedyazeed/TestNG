@@ -6,7 +6,7 @@ public class priority {
 //if I will not use priority keyword then it will execute based on the
 // alphabetical order of the methods names
     //another note that priority = 0 by default is the highest priority
-    @Test(priority = 2)
+    @Test(priority = 2,groups = "regression")
     public void Atest(){
         System.out.println("i am TestA");
     }

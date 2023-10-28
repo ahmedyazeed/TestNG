@@ -10,7 +10,7 @@ public class testNGannotations {
         System.out.println("i am before method");
     }
 
-    @Test
+    @Test (groups = "regression")
     public void aTestCase(){
         System.out.println("i am the first test case");
     }

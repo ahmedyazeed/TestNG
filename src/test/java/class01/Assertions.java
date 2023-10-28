@@ -16,14 +16,14 @@ verify that the login button is enabled
 verify that you are able to login into HRMS website
 */
     public static WebDriver driver;
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void SetupBrowser(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
-    @Test
+    @Test (groups = "regression")
     public void login(){
         WebElement username = driver.findElement(By.xpath("//input[@name='txtUsername']"));
         username.sendKeys("Admin");
